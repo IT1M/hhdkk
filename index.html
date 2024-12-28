@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات الرقمية والمدونة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <h1>Welcome to Our Website</h1>
+    </div>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>This is a brief description about our company.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>You can reach us at contact@example.com</p>
+    </section>
+    <header>
+        <img src="https://www2.0zz0.com/2024/12/28/12/817251006.jpeg" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <h2>المنتجات الرقمية</h2>
+            <div class="product">
+                <h3>المنتج 1</h3>
+                <p>وصف المنتج 1.</p>
+                <button class="buy-button">اشتري الآن</button>
+            </div>
+            <div class="product">
+                <h3>المنتج 2</h3>
+                <p>وصف المنتج 2.</p>
+                <button class="buy-button">اشتري الآن</button>
+            </div>
+            <div class="product">
+                <h3>المنتج 3</h3>
+                <p>وصف المنتج 3.</p>
+                <button class="buy-button">اشتري الآن</button>
+            </div>
+            <div class="product">
+                <h3>المنتج 4</h3>
+                <p>وصف المنتج 4.</p>
+                <button class="buy-button">اشتري الآن</button>
+            </div>
+             <div class="product">
+                <h3>المنتج 5</h3>
+                <p>وصف المنتج 5.</p>
+                <button class="buy-button">اشتري الآن</button>
+            </div>
+             <div class="product">
+                <h3>المنتج 6</h3>
+                <p>وصف المنتج 6.</p>
+                <button class="buy-button">اشتري الآن</button>
+            </div>
+        </section>
+    </main>
+    
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>بيانات الدفع</h2>
+            <p>رقم الحساب: 9374795939457</p>
+            <p>بنك: الراجحي</p>
+            <p>الاسم: yzydalshmry</p>
+        </div>
+    </div>
+    
+    <script>
+        const modal = document.getElementById("paymentModal");
+        const buyButtons = document.querySelectorAll(".buy-button");
+        const closeButton = document.querySelector(".close");
+
+        buyButtons.forEach(button => {
+            button.onclick = function() {
+                modal.style.display = "block";
+            }
+        });
+
+        closeButton.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Digital Products & Blog</p>
+    </footer>
+</body>
+</html>
